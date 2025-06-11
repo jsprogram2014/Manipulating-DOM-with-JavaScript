@@ -68,11 +68,13 @@ function addTask() {
         // creating the button to edit
         const editButton=document.createElement("button");
         editButton.textContent="Edit";
+        // when the addTask function is executed the arrow function remembers the reference to the element which is the spans
         editButton.onclick = () => editTask(spans);
 
         // creating the button to delete
         const delButton=document.createElement("button");
         delButton.textContent="Delete";
+        // when the addTask function is executed the arrow function remembers the reference to the element which is the lis
         delButton.onclick = () => deleteTask(lis);
 
         // inserting spans inside the list
