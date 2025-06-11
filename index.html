@@ -73,7 +73,7 @@ function addTask() {
         // creating the button to delete
         const delButton=document.createElement("button");
         delButton.textContent="Delete";
-        delButton.onclick = () => deleteTask(li);
+        delButton.onclick = () => deleteTask(lis);
 
         // inserting spans inside the list
         lis.appendChild(spans);
@@ -90,15 +90,19 @@ function addTask() {
     }
 }
 
-// function edit an list item
+// function to edit a list item
 function editTask(span){
     var editText=prompt("Enter the replacing item:",span.textContent)
-
     if (editText!="" && editText.trim()!=""){
         span.textContent=editText
     }
-};
-    
+}
+
+// function to delete a list item
+function deleteTask(lis){
+    const uls=document.getElementById("todoList")
+    uls.removeChild(lis)
+}
 </script>
 
 </body>
